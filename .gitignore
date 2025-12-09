@@ -1,0 +1,67 @@
+# ===========================================
+# Docker environment
+# ===========================================
+
+# MySQL 永続化データ（Git管理しない）
+docker/mysql/data/*
+!docker/mysql/data/.gitkeep
+
+# その他不要ファイル
+docker/mysql/*tmp*
+docker/*.pid
+
+# PHP コンテナから生成されるキャッシュなど（必要に応じて）
+*.pid
+
+# ===========================================
+# Laravel (src に入る想定)
+# ===========================================
+
+# Laravel プロジェクト全体を Git 管理しない（src 内部で管理）
+/src/vendor/
+/src/node_modules/
+/src/storage/*.key
+/src/storage/logs/**
+/src/storage/framework/cache/**
+/src/storage/framework/sessions/**
+/src/storage/framework/views/**
+/src/public/hot
+/src/public/storage
+/src/public/build
+/src/.phpunit.cache
+/src/.phpunit.result.cache
+
+# .env 系
+/.env
+/src/.env
+/src/.env.*
+!/src/.env.example
+
+# Composer / npm logs
+/src/npm-debug.log
+/src/yarn-error.log
+
+# ===========================================
+# IDE / Editor settings
+# ===========================================
+
+.idea/
+.fleet/
+.vscode/  # setting.jsonをチームで共有する場合は除外
+*.code-workspace
+
+# ===========================================
+# OS-generated files
+# ===========================================
+
+.DS_Store
+Thumbs.db
+
+# ===========================================
+# Optional (プロジェクト直下に勝手に生成されることがある)
+# ===========================================
+
+.cache/
+.local/
+.config/
+.bash_history
