@@ -61,3 +61,24 @@ npm install
 /.gitignore
 /src/.gitignore
 ```
+
+## 管理者による勤怠修正について
+
+本システムでは、管理者は勤怠情報を直接修正可能としています。
+この場合、修正内容は `attendances` および `breaks` テーブルに
+直接反映され、申請履歴（applications）は作成されません。
+
+これは本アプリケーションが小規模システムであり、
+修正履歴の厳密な証跡管理を要件としていないためです。
+
+なお、将来的な拡張として、以下の対応が考えられます。
+
+- 管理者修正も `applications` テーブルに記録する
+- `source_type` カラムを追加し、
+  - `user_request`（ユーザー申請）
+  - `admin_fix`（管理者直接修正）
+  を区別することで証跡管理を強化する
+
+## テーブル仕様書
+applicationsのstatusはdefault値'pending'とする。
+（レコードinsert時点で申請が発生したとみなすため）
