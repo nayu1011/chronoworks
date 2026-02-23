@@ -72,7 +72,7 @@ chronoworks（勤怠管理アプリ）
 
 ### 1. リポジトリをクローン
 ```bash
-git clone git@github.com:nayu1011/chronoworks.git
+git clone https://github.com/nayu1011/chronoworks.git
 cd chronoworks
 ```
 ＊MySQLが起動しない場合は、OSによりdocker-compose.ymlの設定を調整してください。
