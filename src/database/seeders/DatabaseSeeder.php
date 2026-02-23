@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
         ];
 
         // 勤務期間
-        $period = CarbonPeriod::create('2026-01-01', '2026-03-31');
+        $period = CarbonPeriod::create('2026-01-01', '2026-02-22');
 
         foreach ($users as $index => $name) {
 

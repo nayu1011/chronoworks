@@ -107,6 +107,7 @@ php artisan key:generate
 ```
 
 ### 5. ダミーデータ作成
+環境によっては時間がかかる場合がありますが、下記コマンド実行後は完了までお待ちください。
 ```bash
 php artisan migrate:fresh --seed
 ```
@@ -117,14 +118,14 @@ exit
 ```
 
 ## ログイン情報
-【一般ユーザー用】http://localhost/login
+【一般ユーザー用】<a href="http://localhost/login" target="_blank">http://localhost/login</a>
 ```bash
 一般ユーザー
 email: user1@example.com（user1～user10）
 password: password
 ```
 
-【管理者用】http://localhost/admin/login
+【管理者用】<a href="http://localhost/admin/login" target="_blank">http://localhost/admin/login</a>
 ```bash
 管理者
 email: admin@example.com
@@ -145,11 +146,12 @@ password: password
 ## テスト
 Featureテストのみ実装済み
 ```bash
+docker compose exec php bash
 php artisan test
 ```
 
-## Git 管理しないもの
-以下を参照してください
+## Git 管理対象外について
+以下をご参照ください
 ```bash
 /.gitignore
 /src/.gitignore
@@ -168,4 +170,5 @@ php artisan test
   - `admin_fix`（管理者直接修正）
   を区別することで証跡管理を強化する
 
-> 以上
+
+以上
