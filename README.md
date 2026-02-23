@@ -64,6 +64,8 @@ chronoworks（勤怠管理アプリ）
 
 ## テーブル仕様書
 [こちらのテーブル仕様書（Googleスプレッドシート）](https://docs.google.com/spreadsheets/d/1jExANbBU1Z2vNNaUE9iVfF8Fdn1iX-O7gIGHaa5i7qg/edit?gid=1188247583#gid=1188247583&range=A1)をご参照ください。
+> applicationsのstatusはdefault値'pending'としました。  
+（レコードinsert時点で申請が発生したとみなすため
 
 ## セットアップ手順
 ご自身の作業ディレクトリに移動してから以下の手順で操作してください。
@@ -166,6 +168,4 @@ php artisan test
   - `admin_fix`（管理者直接修正）
   を区別することで証跡管理を強化する
 
-## テーブル仕様書について
-applicationsのstatusはdefault値'pending'としました。  
-（レコードinsert時点で申請が発生したとみなすため）
+> 以上
