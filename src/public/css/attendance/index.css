@@ -1,0 +1,61 @@
+.attendance-index {
+    padding: 150px 0;
+    gap: 20px;
+}
+
+.attendance-status {
+    width: 80px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #c8c8c8;
+    color: #696969;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.attendance-date {
+    color: #000;
+    font-size: 30px;
+}
+
+.attendance-time {
+    color: #000;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.attendance-actions {
+    margin-top: 40px;
+}
+
+.attendance-working {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.attendance-btn {
+    width: 150px;
+    height: 60px;
+    border-radius: 14px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.break-btn {
+    background-color: #fff;
+    color: #000;
+}
+
+.attendance-message {
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}

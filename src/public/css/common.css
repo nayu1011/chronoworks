@@ -1,0 +1,237 @@
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #f0eff2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0eff2;
+}
+
+/* ヘッダー */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 60px;
+    background-color: #000;
+    color: white;
+    padding: 10px 15px;
+}
+
+.header__logo-wrapper {
+    max-width: 300px;
+}
+
+.header__logo {
+    width: 100%;
+    height: auto;
+}
+
+.header__link-inner {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    white-space: nowrap;
+}
+
+.header__link {
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header__link-logout input{
+    all: unset;
+    color: #fff;
+    background-color: transparent;
+}
+
+/* メインコンテンツ */
+.content {
+    flex-grow: 1;
+}
+
+/* レイアウト用コンテナ（全ページ共通） */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #f0eff2;
+    color:#737373;
+}
+
+/* ログイン前のページ見出し共通 */
+.page-heading--auth {
+    color: #000000;
+    font-size: 30px;
+    align-self: center;
+}
+
+/* ログイン後のページ見出し共通 */
+.page-heading {
+    font-size: 24px;
+    padding-left: 15px;
+    border-left: solid 8px #000;
+    align-self: flex-start;
+}
+
+/* 黒太字共通 */
+.black-bold-letter {
+    color: #000;
+    font-weight: bold;
+}
+
+/* ページリンク共通 */
+.page-link {
+    margin: 0 auto;
+    font-size: 16px;
+    color: #00f;
+}
+
+/* フォーム共通コンポーネント */
+.form__group {
+    margin-bottom: 20px;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form__btn {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form__btn--disabled {
+    background-color: #696969;
+    cursor: default;
+    /* pointer-events: none; */
+}
+
+.form__error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* タブメニュー */
+.application-tabs {
+    padding: 10px 40px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    align-self: flex-start;
+}
+
+.tabs__link {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.tabs__link--active {
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.verify-link {
+    display: block;
+    padding: 10px 20px;
+    background-color: #d9d9d9;
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* 一覧系 */
+.list-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.list-table thead th{
+    padding: 10px 30px;
+    text-align: center;
+}
+
+.list-table tr {
+    padding: 5px 40px;
+    height: 50px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.list-table thead tr {
+    border-bottom: 3px solid #ddd;
+}
+
+.list-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.list-table th {
+    white-space: nowrap;
+}
+
+.td--nowrap {
+    white-space: nowrap;
+}
+
+.admin-action {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.admin-action__btn {
+    width: auto;
+    min-width: 120px;
+    padding: 10px 16px;
+}

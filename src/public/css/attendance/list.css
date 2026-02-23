@@ -1,0 +1,43 @@
+.month-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.this-month {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap: 6px;
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
+
+.month-picker {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.date-picker {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.calendar-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+

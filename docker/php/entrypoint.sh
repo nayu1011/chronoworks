@@ -21,9 +21,6 @@ done
 
 # Laravel実行ユーザーにディレクトリの所有権を変更（必要に応じてコメントアウトを外す）
 #chown -R appuser:appgroup /var/www/storage /var/www/bootstrap/cache
-
-# 【Todo】migration / seeder / model が固まってからコメントアウトを外す
-# 【Todo】entrypoint.sh の中を「開発中と本番で切替できる書き方」にする
 # MySQL の起動完了を待機してからマイグレーションとシーディングを実行
 # ./wait-for-mysql.sh mysql:3306 -- php artisan migrate:refresh --seed --force
 

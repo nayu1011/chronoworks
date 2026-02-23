@@ -1,0 +1,127 @@
+.attendance-detail {
+    max-width: 800px;
+}
+
+/* テーブル */
+.list-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.list-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.list-table tr:last-child {
+    border-bottom: none;
+}
+
+/* 左列（ラベル） */
+.list-table th {
+    width: 240px;
+    color: #737373;
+    font-weight: bold;
+    text-align: left;
+    white-space: nowrap;
+    padding: 20px 50px;
+    vertical-align: middle;
+}
+
+/* 右列（値・入力） */
+.list-table td {
+    padding: 20px 50px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* 出勤・休憩など横並び */
+.list-table td > .time-range {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* フォーム全体 */
+.detail-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 修正ボタン */
+.detail-form .form__btn {
+    width: 100px;
+    align-self: flex-end;
+}
+
+.form-input--time {
+    width: 100px;
+    border: solid 1px #e1e1e1;
+    border-radius: 4px;
+    padding: 2px 6px;
+    text-align: center;
+}
+
+.form-input--time::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.form-input--comment {
+    width: 240px;
+    border: solid 1px #e1e1e1;
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+/* time未入力の --:-- を消す（Chrome / Edge） */
+.form-input--time::-webkit-datetime-edit {
+    color: transparent;
+}
+
+/* フォーカスしたら見えるようにする */
+.form-input--time:focus::-webkit-datetime-edit {
+    color: #000;
+}
+
+/* 入力後も表示される */
+.form-input--time:not(:placeholder-shown)::-webkit-datetime-edit {
+    color: #000;
+}
+
+.name {
+    padding: 0 20px;
+}
+
+.date-split {
+    display: flex;
+    gap: 90px;        /* 年と月日の間隔 */
+    align-items: center;
+}
+
+.date-year {
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+.date-md {
+    font-weight: bold;
+}
+
+.application-message {
+    width: 100%;
+    color: #f87779;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* 申請中は入力不可に見せる */
+.is-applied .form-input--time,
+.is-applied .form-input--comment {
+    border: none;
+    background-color: transparent;
+}
+

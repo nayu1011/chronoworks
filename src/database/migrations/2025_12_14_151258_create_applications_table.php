@@ -10,16 +10,14 @@ return new class extends Migration
     {
         Schema::create('applications', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('applicant_user_id')->constrained();
-            $table->foreignId('approver_user_id')->constrained();
+            $table->string('status', 20)->default('pending');
+            $table->foreignId('applicant_user_id')->constrained('users');
             $table->foreignId('attendance_id')->constrained();
             $table->dateTime('start_time');
             $table->dateTime('end_time');
             $table->text('comment')->nullable();
-            $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
-            
-
-
+            $table->foreignId('approver_user_id')->nullable()->constrained('users');
+            $table->dateTime('approved_at')->nullable();
             $table->timestamps();
         });
     }

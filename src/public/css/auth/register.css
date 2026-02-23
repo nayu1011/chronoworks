@@ -1,0 +1,26 @@
+/* ヘッダーリンク　非表示 */
+.header__link-inner {
+    display: none;
+}
+
+.content {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.container {
+    background-color: #ffffff;
+}
+
+.register-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 登録画面フォーム */
+.register-page__form {
+    width: 100%;
+    max-width: 500px;
+}

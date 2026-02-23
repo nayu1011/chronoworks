@@ -12,7 +12,7 @@ services:
       - ./docker/php/entrypoint.sh:/usr/local/bin/entrypoint.sh # カスタムentrypoint.shをマウント
       - ./docker/php/wait-for-mysql.sh:/usr/local/bin/wait-for-mysql.sh # MySQL待機.shをマウント
     entrypoint: ["/usr/local/bin/entrypoint.sh"]  # カスタムentrypoint.shを使用
-    command: ["php-fpm"] # PHP-FPMを起動【Todo】これ超重要なのでチートシート化する（DockerfileでCMD指定してもentrypoint.shで上書きされるため）
+    command: ["php-fpm"] # PHP-FPMを起動
     environment:
       HOME: /home/appuser # コンテナ内のホームディレクトリを指定
       XDG_CONFIG_HOME: /home/appuser/.config # コンテナ内のXDG_CONFIG_HOMEを指定
