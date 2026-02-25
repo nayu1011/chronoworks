@@ -112,11 +112,6 @@ php artisan key:generate
 php artisan migrate:fresh --seed
 ```
 
-### 6.セットアップ終了
-```bash
-exit
-```
-
 ## ログイン情報
 【一般ユーザー用】<a href="http://localhost/login" target="_blank">http://localhost/login</a>
 ```bash
@@ -132,6 +127,11 @@ email: admin@example.com
 password: password
 ```
 
+## URL
+- 開発環境：http://localhost/
+- phpMyAdmin：http://localhost:8080/
+- MailHog：http://localhost:8025/
+
 ## 操作手順概要
 ### 1.一般ユーザーでログイン
 出勤　→　休憩入　→　休憩戻　→　退勤
@@ -146,7 +146,7 @@ password: password
 ## テスト
 Featureテストのみ実装済み
 ```bash
-docker compose exec php bash
+php artisan optimize:clear
 php artisan test
 ```
 

@@ -86,7 +86,7 @@ abstract class TestCase extends BaseTestCase
     // 各テストの後にsetTestNowを解除
     protected function tearDown(): void
     {
-        Carbon::setTestNow();
+        $this->clearNow();
         parent::tearDown();
     }
 }
